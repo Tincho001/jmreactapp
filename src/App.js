@@ -25,10 +25,7 @@ function App() {
         <Categorias/>
         <CardProducto/><CardsProductos/>
 
-    
-      
-        {/* Nosotros */}
-        {/* LineUp */}
+  
       </Main>
       {/* footer */}
     </>
