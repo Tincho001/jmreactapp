@@ -60,7 +60,7 @@ export const products = [
     title: 'Seguridad Cuero',
     img: 'https://integradorjs-gray.vercel.app/assets/img/products/fundas/cuero.jpg',
     desc: 'Cuero 100% Argento!',
-    price: 1,
+    price: 1120,
     category: 'seguridad',
   },
   {
