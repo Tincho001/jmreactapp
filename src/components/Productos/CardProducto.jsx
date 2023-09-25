@@ -7,10 +7,10 @@ const CardProducto = ({img, title, desc, price}) => {
     <ProductosCard>
       <img src={img} alt= {title}/>
 <h2>{title}</h2>
-<p>{desc}</p>
+<p fontSize='15px'>{desc}</p>
 
 <ContainerPrice>
-    <CardPrice>{price}</CardPrice>
+    <CardPrice>$ {price}</CardPrice>
     <Button>Agregar</Button>
 </ContainerPrice>
 

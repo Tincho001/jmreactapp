@@ -1,11 +1,10 @@
-import styled from "styled-components";
-import { Section } from "../globalComponents/GlobalComponents";
+import styled from 'styled-components';
+import { Section } from '../globalComponents/GlobalComponents';
 
 export const HeroSection = styled(Section)`
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 150px;
- 
 `;
 
 export const HeroSlogan = styled.div`

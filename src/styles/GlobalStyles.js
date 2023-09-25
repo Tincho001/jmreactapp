@@ -8,7 +8,8 @@ export const GlobalStyles = createGlobalStyle`
         list-style: none;
         text-decoration:none ;
         color: white;
-        font-family: 'Nunito',sans-serif ;
+        
+        font-family: 'Gruppo', sans-serif;
     }
 
     html {

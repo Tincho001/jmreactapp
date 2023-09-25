@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
   margin: 0 auto;
@@ -39,8 +39,8 @@ export const Navbar = styled.nav`
     height: calc(100vh - 100px);
     z-index: 5;
     transition: all 0.4s ease-in-out;
-    transform: ${(props) =>
-      props.isOpen ? "translateX(0)" : "translateX(200%)"};
+    transform: ${props =>
+      props.isOpen ? 'translateX(0)' : 'translateX(200%)'};
   }
 `;
 
@@ -61,7 +61,7 @@ export const NavbarItem = styled.li`
   cursor: pointer;
 
   &::after {
-    content: "";
+    content: '';
     height: 0.5px;
     width: 100%;
     background: var(--white);
@@ -78,7 +78,6 @@ export const NavbarItem = styled.li`
     transform: scaleX(1);
   }
 `;
-
 
 export const CartNavStyled = styled.div`
   position: relative;
@@ -100,6 +99,5 @@ export const CartNavStyled = styled.div`
     font-size: 0.9rem;
   }
 `;
-
 
 

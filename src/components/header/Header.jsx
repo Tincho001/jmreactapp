@@ -22,9 +22,8 @@ const Header = () => {
         <Navbar isOpen={ctx.isMenuOpen}>
           <NavbarList>
             <NavbarItem>Inicio</NavbarItem>
-            <NavbarItem>Diseños</NavbarItem>
             <NavbarItem>CaseShop</NavbarItem>
-            <NavbarItem>Registro</NavbarItem>
+            <NavbarItem>Nosotros</NavbarItem>
             <NavbarItem>
               <FaUserAlt />
             </NavbarItem>

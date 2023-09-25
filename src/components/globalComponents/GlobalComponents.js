@@ -35,14 +35,3 @@ export const TextSpan = styled.span`
   font-size: ${(props) => props.size};
 `;
 
-export const Divider = styled.div`
-  width: min(90%, 600px);
-  margin: 30px;
-  height: 1px;
-  background: rgb(89, 136, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(89, 136, 255, 1) 74%,
-    rgba(255, 152, 47, 1) 74%
-  );
-`;

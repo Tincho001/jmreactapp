@@ -3,9 +3,10 @@ import {
   ButtonContainerStyled,
   ProductosContainer,
 } from './CardsProductosStyles';
-import { Button } from '@mui/material';
+
 import { Products } from '../../data';
 import CardProducto from './CardProducto';
+import Button from '../UI/Button/Button';
 
 const CardsProductos = () => {
   return (
@@ -16,8 +17,8 @@ const CardsProductos = () => {
         )}
       </ProductosContainer>
       <ButtonContainerStyled>
-        <Button>Ver menos</Button>
-        <Button>Ver mas</Button>
+      <Button>ver mas</Button>
+      <Button>ver menos</Button>
       </ButtonContainerStyled>
     </>
   );

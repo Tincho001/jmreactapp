@@ -6,7 +6,7 @@ export const StyledButton = styled(motion.button)`
   outline: none;
   border: none;
   border-radius: ${({ radius }) => `${radius}px`};
-  background: var(--white);
+  background: var(--dark-blue);
   color: white;
   text-transform: uppercase;
   font-weight: 400;

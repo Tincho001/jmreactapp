@@ -8,7 +8,7 @@ import {
   HeroTextContainer,
   HeroTitle,
 } from "./HeroStyles";
-import { Divider } from "../globalComponents/GlobalComponents";
+
 
 const Hero = () => {
   return (
@@ -16,7 +16,7 @@ const Hero = () => {
       <HeroSection src= "https://integradorjs-gray.vercel.app/assets/img/fondo1.png">
         <HeroSlogan>
           <HeroTextContainer>
-            <HeroTitle>La máxima protección para tu telefono</HeroTitle>
+            <HeroTitle>LA MAXIMA PROTECCION PARA TU TELEFONO</HeroTitle>
             <HeroParagraph>
               En JM Telefonia nos preocupamos por la seguridad de tu pantalla
               con vidrios templados y tecnologia 9D, mezclados con estilos
@@ -29,7 +29,7 @@ const Hero = () => {
         </HeroSlogan>
         <HeroImage src="./images/logo.png" alt="Logo react" />
       </HeroSection>
-      <Divider/>    </>
+          </>
   );
 };
 
