@@ -10,10 +10,9 @@ export const GlobalStyles = createGlobalStyle`
         color: white;
         font-family: 'Gruppo', sans-serif;
 
-        @media (max-width: 992px){
-            margin: none;
+       
         }
-    }
+    
 
     html {
         scroll-behavior: smooth;
