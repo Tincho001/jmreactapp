@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
     *{
@@ -8,8 +8,11 @@ export const GlobalStyles = createGlobalStyle`
         list-style: none;
         text-decoration:none ;
         color: white;
-        
         font-family: 'Gruppo', sans-serif;
+
+        @media (max-width: 992px){
+            margin: none;
+        }
     }
 
     html {
