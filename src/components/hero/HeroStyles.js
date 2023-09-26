@@ -4,7 +4,8 @@ import { Section } from '../globalComponents/GlobalComponents';
 export const HeroSection = styled(Section)`
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 150px;
+  margin-top: 120px;
+  margin-bottom:20px;
 `;
 
 export const HeroSlogan = styled.div`

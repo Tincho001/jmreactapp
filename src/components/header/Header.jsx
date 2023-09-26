@@ -22,7 +22,7 @@ const Header = () => {
         <Navbar isOpen={ctx.isMenuOpen}>
           <NavbarList>
             <NavbarItem>Inicio</NavbarItem>
-            <NavbarItem>CaseShop</NavbarItem>
+            <NavbarItem>Tienda</NavbarItem>
             <NavbarItem>Nosotros</NavbarItem>
             <NavbarItem>
               <FaUserAlt />
