@@ -7,6 +7,7 @@ import {
 import Layout from '../components/Layout/Layout';
 import Home from '../pages/Home/Home';
 import PageNotFound from '../pages/PageNotFound/PageNotFound';
+import Tienda from '../pages/Tienda/Tienda';
 
 const Routes = () => {
   return (
@@ -14,6 +15,8 @@ const Routes = () => {
       <Layout>
         <ReactDomRoutes>
           <Route path='/' element={<Home />} />
+          <Route path='tienda' element={<Tienda/>}/>
+
           <Route path='*' element={<PageNotFound />} />
         </ReactDomRoutes>
       </Layout>

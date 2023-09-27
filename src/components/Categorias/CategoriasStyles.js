@@ -3,13 +3,14 @@ import { motion } from 'framer-motion';
 
 export const CategoriasContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   user-select: none;
 `;
 
 export const CardCategoria = styled(motion.div)`
+  margin-top:200px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -4,45 +4,46 @@ export const ProductosContainer = styled.div`
   display: grid;
   place-items: center;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(auto-fit, 380px);
   row-gap: 3.5rem;
   width: 100%;
   padding: 6rem 0;
 `;
 
 export const ProductosCard = styled.div`
-  background: var(--dark-blue);
+  background: rgb(67 73 77 / 39%);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 250px;
-  height: 270px;
+  height: 280px;
   border-radius: 5px;
   position: relative;
   padding-top: 50px;
 
   img {
-    width: 130px;
-  height: 130px;
+    width: 150px;
+  height: 160px;
   border-radius: 20%;
   font-size: 70px;
   font-weight: 300;
-  color: var(--grey);
+ 
   position: absolute;
-  top: -20px;
+  top: -7px;
   background-size: cover;
   cursor: pointer;
  
   }
   h2 {
-    font-weight: 700;
-    margin: 0;
+    font-weight: 800;
+    margin-top: 70px;
   }
   p {
     
     color: #fff;
     font-size: ${props => props.fontSize};
+    margin-top: 10px;
   }
 `;
 
