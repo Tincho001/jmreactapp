@@ -1,17 +1,18 @@
 import React from 'react';
-
+import {LayoutContainerStyled, ContentContainerStyled} from './LayoutStyles';
 import Header from '../header/Header';
 import Footer from '../Footer/Footer';
 
-import { Main } from '../globalComponents/GlobalComponents';
+
 
 const Layout = ({ children }) => {
   return (
-    <>
+<LayoutContainerStyled>
       <Header />
-     <Main>{children}</Main>
+      <ContentContainerStyled>{children}</ContentContainerStyled>
       <Footer />
-    </>
+</LayoutContainerStyled>
+
   );
 };
 

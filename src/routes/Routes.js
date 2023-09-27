@@ -1,20 +1,24 @@
-import React from 'react'
-import { BrowserRouter, Routes as ReactRouterDom, Route } from 'react-router-dom'
-import Layout from '../components/Layout/Layout'
-import Home from '../pages/Home/Home'
-
+import React from 'react';
+import {
+  BrowserRouter,
+  Routes as ReactDomRoutes,
+  Route,
+} from 'react-router-dom';
+import Layout from '../components/Layout/Layout';
+import Home from '../pages/Home/Home';
+import PageNotFound from '../pages/PageNotFound/PageNotFound';
 
 const Routes = () => {
   return (
-<BrowserRouter>
-<Layout>
-  <ReactRouterDom>
-    <Route path= "/" element = {<Home/>}/>
-  </ReactRouterDom>
+    <BrowserRouter>
+      <Layout>
+        <ReactDomRoutes>
+          <Route path='/' element={<Home />} />
+          <Route path='*' element={<PageNotFound />} />
+        </ReactDomRoutes>
+      </Layout>
+    </BrowserRouter>
+  );
+};
 
-</Layout>
-</BrowserRouter>
-  )
-}
-
-export default Routes
+export default Routes;

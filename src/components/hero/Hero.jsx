@@ -2,7 +2,7 @@ import React from "react";
 
 import {
   HeroImage,
-  HeroParagraph,
+  // HeroParagraph,
   HeroSection,
   HeroSlogan,
   HeroTextContainer,
@@ -17,13 +17,13 @@ const Hero = () => {
         <HeroSlogan>
           <HeroTextContainer>
             <HeroTitle>LA MAXIMA PROTECCION PARA TU TELEFONO</HeroTitle>
-            <HeroParagraph>
+            {/* <HeroParagraph>
               En JM Telefonia nos preocupamos por la seguridad de tu pantalla
               con vidrios templados y tecnologia 9D, mezclados con estilos
               modernos de tu TPU y de excelente calidad para tu celular, con
               amplia variedad de modelos, colores y algunos otros accesorios
               utiles para vos...
-            </HeroParagraph>
+            </HeroParagraph> */}
           </HeroTextContainer>
        
         </HeroSlogan>

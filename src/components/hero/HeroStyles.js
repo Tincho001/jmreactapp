@@ -4,8 +4,11 @@ import { Section } from '../globalComponents/GlobalComponents';
 export const HeroSection = styled(Section)`
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 120px;
+  
   margin-bottom:20px;
+  @media (max-width: 992px) {
+    margin-top: 300px;
+  }
 `;
 
 export const HeroSlogan = styled.div`
@@ -39,15 +42,15 @@ export const HeroTitle = styled.h1`
   color: white;
 `;
 
-export const HeroParagraph = styled.p`
-  font-size: 18px;
-  font-weight: 300px;
-  line-height: 30px;
-  color: white;
-`;
+// export const HeroParagraph = styled.p`
+//   font-size: 22px;
+//  text-align: justify;
+//   line-height: 30px;
+//   color: white;
+// `;
 
 export const HeroImage = styled.img`
-  height: 650px;
+  height: 550px;
   margin-bottom: 20px;
   @media (max-width: 992px) {
     display: none;

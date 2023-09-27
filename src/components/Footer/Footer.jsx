@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <FooterContainer>
         <FooterIcons>
-      <FaFacebook style={{ marginRight: '1rem' }}/>
-      <FaGithub style={{ marginRight: '1rem' }}/>
+      <FaFacebook style={{ marginRight: '3rem' }}/>
+      <FaGithub style={{ marginRight: '3rem' }}/>
       <FaLinkedin style={{ marginRight: '1rem' }}/>
       
       </FooterIcons>

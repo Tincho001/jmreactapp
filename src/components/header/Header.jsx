@@ -21,8 +21,8 @@ const Header = () => {
         <Logo src='./images/logo.png' alt='Logo' />
         <Navbar isOpen={ctx.isMenuOpen}>
           <NavbarList>
-            <NavbarItem>Inicio</NavbarItem>
-            <NavbarItem>Tienda</NavbarItem>
+            <NavbarItem to='/'>Inicio</NavbarItem>
+            <NavbarItem to='/product'>Tienda</NavbarItem>
             <NavbarItem>Nosotros</NavbarItem>
             <NavbarItem>
               <FaUserAlt />
