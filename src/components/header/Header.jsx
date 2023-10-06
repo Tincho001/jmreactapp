@@ -4,8 +4,8 @@ import BarsMenu from '../barsMenu/BarsMenu';
 import {
   CartNavStyled,
   Logo,
+  NavLinkStyled,
   Navbar,
-  NavbarItem,
   NavbarList,
   StyledHeader,
 } from './HeaderStyles';
@@ -21,12 +21,12 @@ const Header = () => {
         <Logo src='./images/logo.png' alt='Logo' />
         <Navbar isOpen={ctx.isMenuOpen}>
           <NavbarList>
-            <NavbarItem to='/'>Inicio</NavbarItem>
-            <NavbarItem to='/product'>Tienda</NavbarItem>
-            <NavbarItem>Nosotros</NavbarItem>
-            <NavbarItem>
+            <NavLinkStyled to='/'>Inicio</NavLinkStyled>
+            <NavLinkStyled to='/tienda'>Tienda</NavLinkStyled>
+            
+            <NavLinkStyled>
               <FaUserAlt />
-            </NavbarItem>
+            </NavLinkStyled>
             <CartNavStyled>
               <CartIcon />
             </CartNavStyled>

@@ -1,38 +1,25 @@
-import styled from "styled-components";
+// import styled from 'styled-components';
 
-export const Main = styled.main`
-  width: 100%;
-  height:80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+// export const Main = styled.main`
 
-export const Section = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 60px 0;
-  max-width: 1300px;
-`;
+// `;
 
+// export const Section = styled.section`
 
+// `;
 
-export const SectionTitle = styled.h2`
-  font-weight: 700;
-  font-size: 42px;
-`;
+// export const SectionTitle = styled.h2`
+//   font-weight: 700;
+//   font-size: 42px;
+// `;
 
-export const SectionParagraph = styled.p`
-  font-size: ${(props) => props.fontSize};
-  font-weight: 300;
-`;
+// export const SectionParagraph = styled.p`
+//   font-size: ${props => props.fontSize};
+//   font-weight: 300;
+// `;
 
-export const TextSpan = styled.span`
-  color: ${(props) => props.color};
-  font-weight: 600;
-  font-size: ${(props) => props.size};
-`;
-
+// export const TextSpan = styled.span`
+//   color: ${props => props.color};
+//   font-weight: 600;
+//   font-size: ${props => props.size};
+// `;

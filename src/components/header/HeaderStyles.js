@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
@@ -55,7 +56,7 @@ export const NavbarList = styled.ul`
   }
 `;
 
-export const NavbarItem = styled.li`
+export const NavLinkStyled = styled(NavLink)`
   position: relative;
   font-size: 22px;
   cursor: pointer;

@@ -7,7 +7,7 @@ import { MessageSection, MessageError, NotFoundImage } from './PageNotFoundStyle
 const PageNotFound = () => {
   return (
 <MessageSection>
-   <MessageError>Esta pagina no existe =(</MessageError>
+   <MessageError>Lo sentimos esta pagina no existe =(</MessageError>
     <NotFoundImage src="./images/logo.png" alt="Logo react" />
 </MessageSection>
   )

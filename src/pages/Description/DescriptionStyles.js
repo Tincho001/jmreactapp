@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const HeroSection = styled.div`
+export const DescriptionSection = styled.div`
   width: 50%;
   height: 76vh;
   align-items: center;
@@ -11,12 +11,14 @@ export const HeroSection = styled.div`
   }
 `;
 
-export const HeroSlogan = styled.div`
-  display: flex;
+
+
+export const DescriptionSlogan = styled.div`
+   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 100%;
-  font-size: 65px;
+  font-size: 25px;
 
   @media (max-width: 992px) {
     justify-content: center;
@@ -25,9 +27,7 @@ export const HeroSlogan = styled.div`
   }
 `;
 
-
-
-export const HeroImage = styled.img`
+export const DescriptionImage = styled.img`
   width: 50%;
 
   @media (max-width: 992px) {
@@ -35,13 +35,9 @@ export const HeroImage = styled.img`
   }
 `;
 export const LinkStyled = styled(Link)`
-border: 1px solid white;
-padding: 10px;
-margin-top:20px;
+  margin-top: 20px;
   color: var(--blue);
   font-weight: 400;
-  font-size: 25px;
+  font-size: 35px;
   cursor: pointer;
-
-
 `;
