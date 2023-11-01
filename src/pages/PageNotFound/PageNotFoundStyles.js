@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const MessageSection = styled.div`
-  margin-top: 200px;
-
+height:100%;
   display: flex;
   flex-direction: column;
   align-items: center;

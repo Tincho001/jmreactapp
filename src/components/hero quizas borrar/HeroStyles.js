@@ -28,7 +28,8 @@ export const HeroSlogan = styled.div`
 
 
 export const HeroImage = styled.img`
-  width: 50%;
+  width: 500px;
+  height: 500px;
 
   @media (max-width: 992px) {
     display: none;

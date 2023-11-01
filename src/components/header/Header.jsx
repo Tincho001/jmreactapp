@@ -23,7 +23,8 @@ const Header = () => {
           <NavbarList>
             <NavLinkStyled to='/'>Inicio</NavLinkStyled>
             <NavLinkStyled to='/tienda'>Tienda</NavLinkStyled>
-            
+          
+          
             <NavLinkStyled>
               <FaUserAlt />
             </NavLinkStyled>

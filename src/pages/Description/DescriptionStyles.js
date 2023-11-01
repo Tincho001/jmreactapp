@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+
 
 export const DescriptionSection = styled.div`
-  width: 50%;
-  height: 76vh;
-  align-items: center;
-  display: flex;
+display: flex;
+align-items: center;
+flex-direction: row-reverse;
+margin-top: 20vh;
+padding: 5vh;
 
   @media (max-width: 992px) {
   }
@@ -14,11 +15,12 @@ export const DescriptionSection = styled.div`
 
 
 export const DescriptionSlogan = styled.div`
-   display: flex;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  max-width: 100%;
-  font-size: 25px;
+  align-items: center;
+  font-size: 32px;
+  text-align: justify;
+
 
   @media (max-width: 992px) {
     justify-content: center;
@@ -27,17 +29,14 @@ export const DescriptionSlogan = styled.div`
   }
 `;
 
-export const DescriptionImage = styled.img`
-  width: 50%;
+export const SloganImage = styled.img`
+width: 450px;
+height: 450px;
 
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
     display: none;
   }
-`;
-export const LinkStyled = styled(Link)`
-  margin-top: 20px;
-  color: var(--blue);
-  font-weight: 400;
-  font-size: 35px;
-  cursor: pointer;
-`;
+
+`
+
+

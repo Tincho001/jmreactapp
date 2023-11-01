@@ -10,7 +10,7 @@ export const CategoriasContainer = styled.div`
 `;
 
 export const CardCategoria = styled(motion.div)`
-  margin-top:200px;
+  margin-top:60px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -7,6 +7,7 @@ const Hero = () => {
     <HeroSection>
       <HeroSlogan>
         LA MAXIMA PROTECCION PARA TU TELEFONO
+        
         <LinkStyled to='/description'>¿Quienes somos?</LinkStyled>
       </HeroSlogan>
 

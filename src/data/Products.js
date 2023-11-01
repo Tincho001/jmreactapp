@@ -29,7 +29,7 @@ export const products = [
     img: 'https://integradorjs-gray.vercel.app/assets/img/products/fundas/rigida.jpg',
     desc: 'Dura mas!',
     price: 450,
-    category: 'Rigida',
+    category: 'Rígidas',
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const products = [
     img: 'https://integradorjs-gray.vercel.app/assets/img/products/fundas/personalizadas.jpg',
     desc: 'Pinta tu selfie',
     price: 550,
-    category: 'Rigida',
+    category: 'Rígidas',
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const products = [
     img: 'https://integradorjs-gray.vercel.app/assets/img/products/fundas/lisa.jpg',
     desc: 'Colorin..',
     price: 690,
-    category: 'Rigida',
+    category: 'Rígidas',
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const products = [
     img: 'https://integradorjs-gray.vercel.app/assets/img/products/fundas/seguridad.jpg',
     desc: 'Cuida tu telephone!',
     price: 780,
-    category: 'seguridad',
+    category: 'Seguridad',
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const products = [
     img: 'https://integradorjs-gray.vercel.app/assets/img/products/fundas/cuero.jpg',
     desc: 'Cuero 100% Argento!',
     price: 1120,
-    category: 'seguridad',
+    category: 'Seguridad',
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const products = [
     img: 'https://integradorjs-gray.vercel.app/assets/img/products/fundas/seguridaddise%C3%B1o.jpg',
     desc: 'Telas y colores',
     price: 800,
-    category: 'seguridad',
+    category: 'Seguridad',
   },
   {
     id: 10,
@@ -101,7 +101,7 @@ export const products = [
     img: '	https://integradorjs-gray.vercel.app/assets/img/products/fundas/transparent.jpg',
     desc: 'Protege tu pantalla',
     price: 450,
-    category: 'templados',
+    category: 'Templados',
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ export const products = [
     img: 'https://integradorjs-gray.vercel.app/assets/img/products/fundas/templado9D.jpg',
     desc: 'Con marco resistente',
     price: 650,
-    category: 'templados',
+    category: 'Templados',
   },
   {
     id: 15,
@@ -117,7 +117,7 @@ export const products = [
     img: 'https://integradorjs-gray.vercel.app/assets/img/products/fundas/antiespia.jpg',
     desc: 'Solo para vos',
     price: 850,
-    category: 'templados',
+    category: 'Templados',
   },
 ];
 
