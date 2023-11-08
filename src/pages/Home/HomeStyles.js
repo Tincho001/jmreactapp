@@ -55,10 +55,11 @@ export const LinkStyled = styled(Link)`
   cursor: pointer;
 `;
 export const RecomendadosWrapper = styled.section`
-  margin-top: 5rem;
-  width: 100%;
+  width: 50%;
+  background: rgb(67 73 77 / 39%);
 
   h2 {
+    font-size: 40px;
     font-weight: 400;
   }
 `;

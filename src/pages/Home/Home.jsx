@@ -6,13 +6,17 @@ import {
   HomeSlogan,
   HomeImage,
   LinkStyled,
+  RecomendadosWrapper,
 } from '../Home/HomeStyles';
-import { Button, Card } from '@mui/material';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import CardsRecomendacion from '../../components/Recomendados/CardsRecomendacion';
 
-import { CardActionArea } from '@mui/material';
+
+// import { Button, Card } from '@mui/material';
+// import CardContent from '@mui/material/CardContent';
+// import CardMedia from '@mui/material/CardMedia';
+// import Typography from '@mui/material/Typography';
+
+// import { CardActionArea } from '@mui/material';
 
 const Home = () => {
   return (
@@ -25,8 +29,13 @@ const Home = () => {
 
         <HomeImage src='./images/logo.png' />
       </HomeContent>
+<RecomendadosWrapper>
+  <h2>HOY TE RECOMENDAMOS</h2>
+<CardsRecomendacion/>
+</RecomendadosWrapper>
 
-      <Card sx={{ maxWidth: 415 }}>
+
+      {/* <Card sx={{ maxWidth: 415 }}>
         {' '}
         
           <CardMedia
@@ -48,7 +57,7 @@ const Home = () => {
             <Button size="small">ir a Tienda</Button>
   
         </CardActionArea>
-      </Card>
+      </Card> */}
     </HomeContainer>
   );
 };
