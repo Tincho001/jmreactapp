@@ -1,27 +1,27 @@
 export const Categories = [
   {
     id: 1,
-    title: "Cristal",
-    category: "Cristal",
+    title: "CRISTAL",
+    category: "CRISTAL",
   },
   {
     id: 2,
-    title: "Rígidas",
-    category: "Rígidas",
+    title: "RIGIDAS",
+    category: "RIGIDAS",
   },
   {
     id: 3,
-    title: "Seguridad",
-    category: "Seguridad",
+    title: "SEGURIDAD",
+    category: "SEGURIDAD",
   },
   {
     id: 4,
-    title: "Mundial",
-    category: "Mundial",
+    title: "MUNDIAL",
+    category: "MUNDIAL",
   },
   {
     id: 5,
-    title: "Templados",
-    category: "Templados",
+    title: "TEMPLADOS",
+    category: "TEMPLADOS",
   },
 ];

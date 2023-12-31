@@ -5,23 +5,21 @@ export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  background-color: #131415;
+  background-image: var(--bg-img);
 
   @media (max-width: 992px) {
   }
 `;
 
 export const HomeContent = styled.div`
+  display: flex;
 
-display: flex;
+  align-items: center;
 
-align-items: center;
-
-
-@media (max-width: 992px) {
-}
-
-`
+  @media (max-width: 992px) {
+  }
+`;
 
 export const HomeSlogan = styled.div`
   display: flex;
@@ -49,17 +47,9 @@ export const LinkStyled = styled(Link)`
   border: 1px solid white;
   padding: 10px;
   margin-top: 20px;
-  color: var(--blue);
+
   font-weight: 400;
   font-size: 25px;
   cursor: pointer;
 `;
-export const RecomendadosWrapper = styled.section`
-  width: 50%;
-  background: rgb(67 73 77 / 39%);
 
-  h2 {
-    font-size: 40px;
-    font-weight: 400;
-  }
-`;

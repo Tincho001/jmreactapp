@@ -1,64 +1,77 @@
 import React from 'react';
-
-import {
-  HomeContainer,
-  HomeContent,
-  HomeSlogan,
-  HomeImage,
-  LinkStyled,
-  RecomendadosWrapper,
-} from '../Home/HomeStyles';
+import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ChakraLink } from '@chakra-ui/react';
 import CardsRecomendacion from '../../components/Recomendados/CardsRecomendacion';
-
-
-// import { Button, Card } from '@mui/material';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Typography from '@mui/material/Typography';
-
-// import { CardActionArea } from '@mui/material';
+import {
+  Box,
+  Heading,
+  Highlight,
+  Image,
+  Flex,
+  Button,
+  Divider,
+} from '@chakra-ui/react';
 
 const Home = () => {
   return (
-    <HomeContainer>
-      <HomeContent>
-        <HomeSlogan>
-          LA MAXIMA PROTECCION PARA TU TELEFONO
-          <LinkStyled to='/description'>¿Quienes somos?</LinkStyled>
-        </HomeSlogan>
+    <Box
+      justifyContent={'center'}
+      alignItems={'center'}
+      mt={'20vh'}
+      marginY='10vh'
+      marginX='1vh'
+      
+    >
+      <Flex marginY='10vh' p={4} display={{ md: "flex" }}>
+        <Heading
+          as='h1'
+          size='3xl'
+          noOfLines={1}
+          display={'flex'}
+          flexDirection={'column'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          mt={{ base: 4, md: 0 }} ml={{ md: 6 }}
+    
+        >
+          MAXIMA PROTECCION PARA TU TELEFONO
+          <ChakraLink as={ReactRouterLink} to='/description'>
+            <Button
+              variant='outline'
+              colorScheme='whiteAlpha'
+              size='md'
+              height='48px'
+              width='300px'
+              border='2px'
+            >
+              ¿Quienes somos?
+            </Button>
+          </ChakraLink>
+        </Heading>
 
-        <HomeImage src='./images/logo.png' />
-      </HomeContent>
-<RecomendadosWrapper>
-  <h2>HOY TE RECOMENDAMOS</h2>
-<CardsRecomendacion/>
-</RecomendadosWrapper>
-
-
-      {/* <Card sx={{ maxWidth: 415 }}>
-        {' '}
+        <Image  maxW={{ base: '100%', sm: '500px' }} src='./images/logo.png' />
+      </Flex>
+      <Box
         
-          <CardMedia
-            component='img'
-            height='140'
-            image='https://mui.com/static/images/cards/contemplative-reptile.jpg'
-            alt=''
-          />
-          <CardContent>
-            <Typography gutterBottom variant='h5' component='div'>
-              Lizard
-            </Typography>
-            <Typography variant='body2' color='text.secondary'>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-          <CardActionArea>
-            <Button size="small">ir a Tienda</Button>
-  
-        </CardActionArea>
-      </Card> */}
-    </HomeContainer>
+        flexDirection='column'
+        justifyContent={'center'}
+        alignItems={'center'}
+        display={{ md: "flex" }}
+      >
+        <Divider orientation='horizontal' width={'30%'} />
+        <Heading lineHeight='tall' marginY='30px'>
+          <Highlight
+            query={['RECOMENDACION']}
+            styles={{ px: '5', py: '3', rounded: 'full', bg: 'brand.400' }}
+            
+          >
+            NUESTRA RECOMENDACION
+          </Highlight>
+        </Heading>
+
+        <CardsRecomendacion />
+      </Box>
+    </Box>
   );
 };
 

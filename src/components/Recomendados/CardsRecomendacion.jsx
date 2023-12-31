@@ -1,17 +1,17 @@
 import React from 'react';
 import CardRecomendacion from './CardRecomendacion';
 import { useSelector } from 'react-redux';
-import { CardsContainer } from './CardsRecomendacionStyled';
+import { Box } from '@chakra-ui/react';
 
 const CardsRecomendacion = () => {
   const recommended = useSelector(state => state.recommended.recommended);
 
   return (
-    <CardsContainer gridLength={recommended.length}>
+    <Box>
       {recommended.map(recomendado => (
         <CardRecomendacion key={recomendado.id} {...recomendado} />
       ))}
-    </CardsContainer>
+    </Box>
   );
 };
 

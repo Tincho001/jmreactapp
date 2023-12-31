@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
   margin: 0 auto;
   height: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0 80px 0 50px;
   position: fixed;
@@ -82,6 +82,7 @@ export const NavLinkStyled = styled(NavLink)`
 
 export const CartNavStyled = styled.div`
   position: relative;
+  font-size: 24px;
   cursor: pointer;
 
   span {
@@ -91,14 +92,23 @@ export const CartNavStyled = styled.div`
     height: 20px;
     width: 20px;
     text-align: center;
-    top: -7px;
-
+    top: -20px;
     border-radius: 1rem;
     border: 1px solid white;
     color: white;
     background-color: black;
     font-size: 0.9rem;
   }
+
 `;
+
+export const NavLinkRegister =  styled(NavLink)`
+
+position: relative;
+font-size: 22px;
+cursor: pointer;
+
+
+`
 
 

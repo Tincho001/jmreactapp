@@ -17,7 +17,7 @@ export const ProductosCard = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 250px;
-  height: 280px;
+  height: 340px;
   border-radius: 5px;
   position: relative;
   padding-top: 50px;
@@ -49,6 +49,7 @@ export const ProductosCard = styled.div`
 
 export const ContainerPrice = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 `;
 

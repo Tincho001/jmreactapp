@@ -1,17 +1,19 @@
 import React from 'react';
-import { CategoriasContainer } from './CategoriasStyles';
+
 import Categoria from './Categoria';
 import { useSelector } from 'react-redux';
+import { Box } from '@chakra-ui/react';
+
 
 const Categorias = () => {
   const categories = useSelector(state => state.categories.categories);
 
   return (
-    <CategoriasContainer>
+    <Box display="flex" alignItems="center" justifyContent="center" >
       {categories.map(category => (
         <Categoria key={category.id} {...category} />
       ))}
-    </CategoriasContainer>
+    </Box>
   );
 };
 

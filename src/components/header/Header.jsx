@@ -8,9 +8,14 @@ import {
   Navbar,
   NavbarList,
   StyledHeader,
+  NavLinkRegister
 } from './HeaderStyles';
-import { FaUserAlt } from 'react-icons/fa';
-import CartIcon from './CartIcon/CartIcon';
+
+
+import ModalChakra from './ModalChakra/ModalChakra';
+import ModalRegister from './ModalRegister/ModalRegister';
+
+
 
 const Header = () => {
   const ctx = useContext(MenuContext);
@@ -23,13 +28,18 @@ const Header = () => {
           <NavbarList>
             <NavLinkStyled to='/'>Inicio</NavLinkStyled>
             <NavLinkStyled to='/tienda'>Tienda</NavLinkStyled>
+         
           
-          
-            <NavLinkStyled>
-              <FaUserAlt />
-            </NavLinkStyled>
+            <NavLinkRegister>
+            
+                <ModalRegister/>
+             
+            </NavLinkRegister>
+
+
             <CartNavStyled>
-              <CartIcon />
+         
+              <ModalChakra/>
             </CartNavStyled>
           </NavbarList>
         </Navbar>
