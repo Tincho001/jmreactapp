@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   Drawer,
   DrawerOverlay,
@@ -16,18 +15,14 @@ import {
 } from '@chakra-ui/react';
 import { formatPrice } from '../../../utils';
 import { useDisclosure } from '@chakra-ui/react';
-import { TiShoppingCart } from 'react-icons/ti'; // Cambié a TiShoppingCart que es más comúnmente usado
+import { TfiShoppingCart, TfiShoppingCartFull } from "react-icons/tfi";
 import ModalChakraCard from './ModalChakraCard';
 import { useSelector } from 'react-redux';
+
 
 const ModalChakra = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { cartItems } = useSelector(state => state.cart);
-
-  const totalCartItems = useSelector(state => state.cart.cartItems).reduce(
-    (acc, item) => (acc += item.quantity),
-    0
-  );
 
   const btnRef = React.useRef();
 
@@ -37,8 +32,11 @@ const ModalChakra = () => {
 
   return (
     <>
-      <TiShoppingCart ref={btnRef} style={{ color: 'teal' }} onClick={onOpen} />
-      <span>{totalCartItems}</span>
+      {cartItems.length === 0 ? (
+        <TfiShoppingCart ref={btnRef} onClick={onOpen} />
+      ) : (
+        <TfiShoppingCartFull ref={btnRef} onClick={onOpen}/>
+      )}
 
       <Drawer
         isOpen={isOpen}

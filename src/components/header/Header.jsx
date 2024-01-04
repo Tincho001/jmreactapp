@@ -8,17 +8,16 @@ import {
   Navbar,
   NavbarList,
   StyledHeader,
-  NavLinkRegister
+  NavLinkContact
 } from './HeaderStyles';
-
-
 import ModalChakra from './ModalChakra/ModalChakra';
-import ModalRegister from './ModalRegister/ModalRegister';
-
+//import ModalRegister from './ModalRegister/ModalRegister';
+import { FcContacts } from "react-icons/fc";
 
 
 const Header = () => {
   const ctx = useContext(MenuContext);
+  const { handleLinkClick } = useContext(MenuContext);
 
   return (
     <>
@@ -26,18 +25,19 @@ const Header = () => {
         <Logo src='./images/logo.png' alt='Logo' />
         <Navbar isOpen={ctx.isMenuOpen}>
           <NavbarList>
-            <NavLinkStyled to='/'>Inicio</NavLinkStyled>
-            <NavLinkStyled to='/tienda'>Tienda</NavLinkStyled>
+            <NavLinkStyled to='/' onClick={handleLinkClick}>Inicio</NavLinkStyled>
+            <NavLinkStyled to='/tienda' onClick={handleLinkClick}>Tienda</NavLinkStyled>
          
-          
-            <NavLinkRegister>
+            <NavLinkContact to='/contacto'><FcContacts /></NavLinkContact>
+            
+            {/* <NavLinkRegister onClick={handleLinkClick}>
             
                 <ModalRegister/>
              
-            </NavLinkRegister>
+            </NavLinkRegister> */}
 
 
-            <CartNavStyled>
+            <CartNavStyled onClick={handleLinkClick}>
          
               <ModalChakra/>
             </CartNavStyled>

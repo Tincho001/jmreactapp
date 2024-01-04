@@ -22,7 +22,7 @@ const Home = () => {
       marginX='1vh'
       
     >
-      <Flex marginY='10vh' p={4} display={{ md: "flex" }}>
+      <Flex marginY='20vh' p={4} display={{ md: "flex" }}>
         <Heading
           as='h1'
           size='3xl'

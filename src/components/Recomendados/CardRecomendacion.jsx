@@ -8,6 +8,8 @@ import {
   Heading,
   Text,
   CardFooter,
+  LinkBox,
+  LinkOverlay,
 } from '@chakra-ui/react';
 
 import { addToCart } from '../../redux/cart/cartSlice';
@@ -23,12 +25,12 @@ const CardRecomendacion = ({ title, img, desc, price, id }) => {
       size='sm'
       w='100%'
     >
-      <Image
+     <LinkBox > <LinkOverlay href='/tienda'><Image
         objectFit='cover'
         maxW={{ base: '100%', sm: '300px' }}
         src={img}
         alt={title}
-      />
+      /></LinkOverlay></LinkBox>
 
       <Stack>
         <CardBody>

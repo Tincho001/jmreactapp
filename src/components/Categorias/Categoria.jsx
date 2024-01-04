@@ -17,7 +17,7 @@ export const Categoria = ({  title, category }) => {
   return (
 <ButtonGroup variant='outline'>
   <Button 
-    colorScheme='twitter'
+    colorScheme='whiteAlpha'
     isActive={category === selectedCategory}
     isDisabled={false}  
     onClick={() => dispatch(selectCategory(category))}

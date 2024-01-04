@@ -52,7 +52,7 @@ const ModalRegister = () => {
             </FormControl>
             <FormControl>
               <FormLabel>Email</FormLabel>
-              <Input ref={initialRef} placeholder='Ej: jmtelefonia@email.com' />
+              <Input placeholder='Ej: jmtelefonia@email.com' />
             </FormControl>
 
             <FormControl>
@@ -81,9 +81,9 @@ const ModalRegister = () => {
 
           <ModalFooter>
             <Button colorScheme='blue' mr={3}>
-              Save
+              Guardar
             </Button>
-            <Button onClick={onClose}>Cancel</Button>
+          
           </ModalFooter>
         </ModalContent>
       </Modal>

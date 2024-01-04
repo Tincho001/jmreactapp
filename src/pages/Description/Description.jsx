@@ -18,7 +18,7 @@ function Description() {
         fontSize='xl'
         padding='4'
         bg='brand.300'
-        color='black'
+        color='white'
         maxW='xl'
         boxShadow='dark-lg'
         p='6'
@@ -40,7 +40,7 @@ function Description() {
       </Text>
     </Box>
 
-    //
+    
   );
 }
 

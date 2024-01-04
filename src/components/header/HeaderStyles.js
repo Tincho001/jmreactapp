@@ -102,10 +102,10 @@ export const CartNavStyled = styled.div`
 
 `;
 
-export const NavLinkRegister =  styled(NavLink)`
+export const NavLinkContact =  styled(NavLink)`
 
 position: relative;
-font-size: 22px;
+font-size: 25px;
 cursor: pointer;
 
 
