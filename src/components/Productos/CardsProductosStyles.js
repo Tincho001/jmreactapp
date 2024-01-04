@@ -4,8 +4,9 @@ export const ProductosContainer = styled.div`
   display: grid;
   place-items: center;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 380px);
-  row-gap: 3.5rem;
+  flex-direction:column; 
+  grid-template-columns: repeat(auto-fit, 280px);
+  row-gap: 2.5rem;
   width: 100%;
   padding: 6rem 0;
 `;
