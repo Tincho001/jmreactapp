@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { MenuContext } from '../../context/Context';
 import BarsMenu from '../barsMenu/BarsMenu';
+
 import {
   CartNavStyled,
   Logo,
@@ -8,12 +9,11 @@ import {
   Navbar,
   NavbarList,
   StyledHeader,
-  NavLinkContact
+  NavLinkContact,
 } from './HeaderStyles';
 import ModalChakra from './ModalChakra/ModalChakra';
 
-import { FcContacts } from "react-icons/fc";
-
+import { FcContacts } from 'react-icons/fc';
 
 const Header = () => {
   const ctx = useContext(MenuContext);
@@ -25,16 +25,19 @@ const Header = () => {
         <Logo src='./images/logo.png' alt='Logo' />
         <Navbar isOpen={ctx.isMenuOpen}>
           <NavbarList>
-            <NavLinkStyled to='/' onClick={handleLinkClick}>Inicio</NavLinkStyled>
-            <NavLinkStyled to='/tienda' onClick={handleLinkClick}>Tienda</NavLinkStyled>
-         
-            <NavLinkContact to='/contacto' onClick={handleLinkClick}><FcContacts /></NavLinkContact>
+            <NavLinkStyled to='/' onClick={handleLinkClick}>
+              Inicio
+            </NavLinkStyled>
+            <NavLinkStyled to='/tienda' onClick={handleLinkClick}>
+              Tienda
+            </NavLinkStyled>
 
-
+            <NavLinkContact to='/contacto' onClick={handleLinkClick}>
+              <FcContacts />
+            </NavLinkContact>
 
             <CartNavStyled onClick={handleLinkClick}>
-         
-              <ModalChakra/>
+              <ModalChakra />
             </CartNavStyled>
           </NavbarList>
         </Navbar>

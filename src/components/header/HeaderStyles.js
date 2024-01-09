@@ -34,6 +34,7 @@ export const Navbar = styled.nav`
     background-color: var(--black);
     background-image: var(--bg-img);
     flex-direction: column;
+    border-color: 5px white;
     top: 100px;
     right: 0;
     width: 100%;
