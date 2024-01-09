@@ -14,15 +14,17 @@ export const StyledHeader = styled.header`
   z-index: 2;
   background-color: #131415;
   background-image: var(--bg-img);
+  -webkit-box-shadow: 5px 5px 15px 5px #FFFFFF; 
+box-shadow: 5px 5px 15px 5px #FFFFFF;
+border-bottom:1px solid #FFFFFF; 
+ 
 
   @media (max-width: 992px) {
     padding: 0 50px 0 10px;
   }
 `;
 
-export const Logo = styled.img`
-  height: 160%;
-`;
+
 
 export const Navbar = styled.nav`
   display: flex;
@@ -31,14 +33,16 @@ export const Navbar = styled.nav`
 
   @media (max-width: 992px) {
     position: absolute;
-    background-color: var(--black);
+    background-color: #131415;
     background-image: var(--bg-img);
+
     flex-direction: column;
-    border-color: 5px white;
+    border: 1px solid #ffff;
     top: 100px;
+    padding-right: 5px;
     right: 0;
-    width: 100%;
-    height: calc(70vh - 100px);
+    width: 98%;
+    height: calc(80vh - 100px);
     z-index: 5;
     transition: all 0.4s ease-in-out;
     transform: ${props =>
@@ -100,16 +104,10 @@ export const CartNavStyled = styled.div`
     background-color: black;
     font-size: 0.9rem;
   }
-
 `;
 
-export const NavLinkContact =  styled(NavLink)`
-
-position: relative;
-font-size: 25px;
-cursor: pointer;
-
-
-`
-
-
+export const NavLinkContact = styled(NavLink)`
+  position: relative;
+  font-size: 25px;
+  cursor: pointer;
+`;

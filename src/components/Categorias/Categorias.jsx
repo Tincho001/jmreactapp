@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Categoria from './Categoria';
 import { useSelector } from 'react-redux';
 import { Box } from '@chakra-ui/react';

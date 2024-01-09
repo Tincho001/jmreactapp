@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Text, Image } from '@chakra-ui/react';
+import { Box, Text, Image, } from '@chakra-ui/react';
 
 function Description() {
   return (
@@ -38,9 +38,8 @@ function Description() {
         encanta lo que hacemos y esperamos que vos también disfrutes de nuestros
         productos tanto como nosotros. ¡Gracias por elegir JM!
       </Text>
+   
     </Box>
-
-    
   );
 }
 

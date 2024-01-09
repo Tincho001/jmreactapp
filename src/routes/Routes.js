@@ -10,15 +10,13 @@ import Home from '../pages/Home/Home';
 import PageNotFound from '../pages/PageNotFound/PageNotFound';
 import Tienda from '../pages/Tienda/Tienda';
 import Contacto from '../pages/Contacto/Contacto';
-import { Logo } from '../components/header/HeaderStyles';
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <Layout>
         <ReactDomRoutes>
-          <Route path='/' element={<Home /> } />
-          <Route path='/' element={<Logo/> } />
+          <Route path='/' element={<Home />} />
           <Route path='tienda' element={<Tienda />} />
           <Route path='description' element={<Description />} />
           <Route path='contacto' element={<Contacto />} />
