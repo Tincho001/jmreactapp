@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react';
 
 const Tienda = () => {
   return (
-    <Box mt='150px' w={'50%'}>
+    <Box mt='150px' >
       <Categorias />
       <CardsProductos />
     </Box>

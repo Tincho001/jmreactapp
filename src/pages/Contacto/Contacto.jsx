@@ -1,68 +1,3 @@
-// import { Formik } from 'formik';
-// import {
-//   Box,
-//   FormControl,
-//   FormLabel,
-//   Input,
-//   FormHelperText,
-//   InputGroup,
-//   InputLeftElement,
-//   Button,
-//   Textarea,
-// } from '@chakra-ui/react';
-// import { formInitialValues } from '../../formik/initialValues';
-// import { validationSchema } from '../../formik/validationSchema';
-// import { PhoneIcon } from '@chakra-ui/icons';
-// import React from 'react';
-
-// const Contacto = () => {
-//   return (
-//     <Box
-//       maxW='sm'
-//       borderWidth='1px'
-//       borderRadius='lg'
-//       overflow='hidden'
-//       mt={'20vh'}
-//       mb='45vh'
-//       p={6}
-//       display={{ md: 'flex' }}
-//     >
-//       <Formik
-//         initialValues={formInitialValues}
-//         validationSchema={validationSchema}
-//         onSubmit={(values, { resetForm }) => {
-//           console.log(values);
-//           resetForm();
-//         }}
-//       >
-//         <FormControl>
-//           <FormLabel>Nombre</FormLabel>
-//           <Input name='name' label='Nombre' type='text' />
-//           <FormHelperText mb='1vh'> Ingresa tu nombre</FormHelperText>
-//           <FormLabel>E-Mail</FormLabel>
-//           <Input type='email' label='Correo Electronico' />
-//           <FormHelperText mb='1vh'>Ingresa tu mail</FormHelperText>
-
-//           <InputGroup>
-//             <InputLeftElement pointerEvents='none'>
-//               <PhoneIcon color='gray.300' />
-//             </InputLeftElement>
-//             <Input type='cellphone' mb='2vh' />
-//           </InputGroup>
-//           <FormLabel>Dejanos tu mensaje</FormLabel>
-//           <Textarea type='text' />
-
-//           <Button mt={4} colorScheme='teal' type='submit'>
-//             Contactar
-//           </Button>
-//         </FormControl>
-//       </Formik>
-//     </Box>
-//   );
-// };
-
-// export default Contacto;
-
 import { useFormik } from 'formik';
 import {
   Box,
@@ -73,12 +8,13 @@ import {
   FormLabel,
   FormErrorMessage,
   useToast,
+  Heading
 } from '@chakra-ui/react';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useNavigate } from 'react-router-dom'; 
 
 export default function Contacto() {
-  const navigate = useNavigate(); // Obtiene la función navigate
+  const navigate = useNavigate(); 
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -133,16 +69,21 @@ export default function Contacto() {
   });
 
   return (
+    
     <Box
-      maxW='sm'
+      w={'400px'}
       borderWidth='1px'
       borderRadius='lg'
       overflow='hidden'
       mt={'20vh'}
       mb='45vh'
       p={10}
-      display={{ md: 'flex' }}
+      flexDirection={'column'}
+      display={{ md: 'flex' }
+    }
     >
+      <Heading p={'10px'}>CONTACTO</Heading>
+
       <form onSubmit={formik.handleSubmit}>
         <FormControl
           isInvalid={formik.touched.name && formik.errors.name}

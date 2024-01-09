@@ -9,9 +9,9 @@ const Categorias = () => {
   const categories = useSelector(state => state.categories.categories);
 
   return (
-    <Box display="flex" alignItems="center" justifyContent="center" >
+    <Box alignItems="center" justifyContent="center" p={4} display={{ md: "flex" }} >
       {categories.map(category => (
-        <Categoria key={category.id} {...category} />
+        <Box ><Categoria key={category.id} {...category} /></Box>
       ))}
     </Box>
   );

@@ -11,7 +11,7 @@ import {
   NavLinkContact
 } from './HeaderStyles';
 import ModalChakra from './ModalChakra/ModalChakra';
-//import ModalRegister from './ModalRegister/ModalRegister';
+
 import { FcContacts } from "react-icons/fc";
 
 
@@ -28,13 +28,8 @@ const Header = () => {
             <NavLinkStyled to='/' onClick={handleLinkClick}>Inicio</NavLinkStyled>
             <NavLinkStyled to='/tienda' onClick={handleLinkClick}>Tienda</NavLinkStyled>
          
-            <NavLinkContact to='/contacto'><FcContacts /></NavLinkContact>
-            
-            {/* <NavLinkRegister onClick={handleLinkClick}>
-            
-                <ModalRegister/>
-             
-            </NavLinkRegister> */}
+            <NavLinkContact to='/contacto' onClick={handleLinkClick}><FcContacts /></NavLinkContact>
+
 
 
             <CartNavStyled onClick={handleLinkClick}>

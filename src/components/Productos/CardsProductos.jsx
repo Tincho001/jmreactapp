@@ -1,11 +1,8 @@
 import React from 'react';
-import {
-  ButtonContainerStyled,
-  ProductosContainer,
-} from './CardsProductosStyles';
+
 
 import CardProducto from './CardProducto';
-import { Button } from '@chakra-ui/react';
+import { Button, Box } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { INITIAL_LIMIT } from '../../utils';
@@ -26,7 +23,16 @@ const CardsProductos = () => {
   useEffect(() => setLimit(INITIAL_LIMIT), [selectedCategory]);
   return (
     <>
-      <ProductosContainer>
+      <Box
+        rowGap={'2.5rem'}
+        display={'grid'}
+        placeItems={'center'}
+        justifyContent={'center'}
+        flexDirection={'column'}
+        gridTemplateColumns={'repeat(auto-fit, 280px)'}
+        w={'100%'}
+        p={'6rem 0'}
+      >
         {Object.entries(products).map(([, cases]) =>
           cases.map(cass => {
             if (limit >= cass.id || selectedCategory) {
@@ -35,11 +41,12 @@ const CardsProductos = () => {
             return null;
           })
         )}
-      </ProductosContainer>
+      </Box>
 
       {!selectedCategory && (
-        <ButtonContainerStyled>
+        <Box display='flex' justifyContent={'center'}>
           <Button
+            margin={'10px'}
             variant='ghost'
             colorScheme='brand.400'
             bg='brand.500'
@@ -51,6 +58,7 @@ const CardsProductos = () => {
           </Button>
 
           <Button
+            margin={'10px'}
             variant='ghost'
             colorScheme='brand.400'
             bg='brand.500'
@@ -59,7 +67,7 @@ const CardsProductos = () => {
           >
             Ver mas
           </Button>
-        </ButtonContainerStyled>
+        </Box>
       )}
     </>
   );

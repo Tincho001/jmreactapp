@@ -37,7 +37,7 @@ export const Navbar = styled.nav`
     top: 100px;
     right: 0;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(70vh - 100px);
     z-index: 5;
     transition: all 0.4s ease-in-out;
     transform: ${props =>
