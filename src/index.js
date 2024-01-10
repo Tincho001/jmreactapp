@@ -4,10 +4,7 @@ import { Provider } from 'react-redux';
 import App from './App';
 import { MenuProvider } from './context/Context';
 import { extendTheme } from '@chakra-ui/react';
-
-// index.js (o cualquier otro archivo donde necesitas importar store y persistor)
 import { persistor, store } from './redux/store';
-
 import { PersistGate } from 'redux-persist/integration/react';
 import { ChakraProvider } from '@chakra-ui/react';
 import Fonts from './styles/GlobalStyles';
@@ -29,7 +26,6 @@ const theme = extendTheme({
       800: 'var(--bg-cards)',
       600: '#0000ff',
       700: 'var(--bg-desc)',
-      
     },
   },
 });

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { Global } from '@emotion/react'
+import { Global } from '@emotion/react';
 export const GlobalStyles = createGlobalStyle`
     *{
         margin:0;
@@ -41,7 +41,6 @@ export const GlobalStyles = createGlobalStyle`
  
 `;
 
-
 const Fonts = () => (
   <Global
     styles={`
@@ -49,6 +48,6 @@ const Fonts = () => (
           @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
       `}
   />
-)
+);
 
-export default Fonts
+export default Fonts;
