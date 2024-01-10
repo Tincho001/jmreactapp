@@ -19,10 +19,18 @@ import {
   PopoverBody,
   PopoverFooter,
 } from '@chakra-ui/react';
-import { AddIcon, DeleteIcon, MinusIcon, SmallCloseIcon } from '@chakra-ui/icons';
+import {
+  AddIcon,
+  DeleteIcon,
+  MinusIcon,
+  SmallCloseIcon,
+} from '@chakra-ui/icons';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../../redux/cart/cartSlice';
-import { removeFromCart, removeProductCart } from '../../../redux/cart/cartSlice';
+import {
+  removeFromCart,
+  removeProductCart,
+} from '../../../redux/cart/cartSlice';
 
 const ModalChakraCard = ({ img, title, id, price, quantity }) => {
   const dispatch = useDispatch();
@@ -55,15 +63,13 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
           boxSize={6}
         />
 
-  <Image
-    maxW={{ base: '100px', md: '150px' }} 
-    src={img}
-    borderRadius='full'
-    boxSize={{ base: '60px', md: '100px' }} 
-    ml={{ base: '0', md: '10px' }} 
-  />
-
-
+        <Image
+          maxW={{ base: '100px', md: '150px' }}
+          src={img}
+          borderRadius='full'
+          boxSize={{ base: '60px', md: '100px' }}
+          ml={{ base: '0', md: '10px' }}
+        />
 
         <Stack w='auto' h='100%'>
           <CardBody>
@@ -82,9 +88,7 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
 
               <Button
                 isDisabled
-               
                 variant='outline'
-             
                 color='white'
                 as='b'
                 height={'8'}
@@ -101,7 +105,12 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
             </ButtonGroup>
           </CardBody>
         </Stack>
-        <Flex align='center' w='auto' h='100%' fontSize='xl'>
+        <Flex
+          align='center'
+          w='auto'
+          fontSize='2xl'
+          justifyContent={'space-around'}
+        >
           $ {price}
         </Flex>
       </Card>
@@ -114,7 +123,7 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
         placement='right'
         closeOnBlur={false}
       >
-        <PopoverContent bg='brand.300'>
+        <PopoverContent bg='brand.300' >
           <PopoverHeader fontWeight='semibold'>Confirmacion</PopoverHeader>
           <PopoverArrow />
           <PopoverCloseButton />
@@ -142,5 +151,3 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
 };
 
 export default ModalChakraCard;
-
-
