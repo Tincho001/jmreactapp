@@ -64,11 +64,11 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
         />
 
         <Image
-          maxW={{ base: '100px', md: '150px' }}
+          maxW={{ base: '90px', md: '90px' }}
           src={img}
           borderRadius='full'
           boxSize={{ base: '60px', md: '100px' }}
-          ml={{ base: '0', md: '10px' }}
+          ml={{ base: '0', md: '1px' }}
         />
 
         <Stack w='auto' h='100%'>
@@ -108,8 +108,8 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
         <Flex
           align='center'
           w='auto'
-          fontSize='2xl'
-          justifyContent={'space-around'}
+          fontSize='28px'
+        
         >
           $ {price}
         </Flex>
