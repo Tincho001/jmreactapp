@@ -22,7 +22,7 @@ const Home = () => {
       marginX='1vh'
       
     >
-      <Flex marginY='20vh' p={4} display={{ md: "flex" }}>
+      <Flex marginY='3vh' p={4} display={{ md: "flex" }}>
         <Heading
           as='h1'
           size='3xl'
@@ -57,9 +57,10 @@ const Home = () => {
         justifyContent={'center'}
         alignItems={'center'}
         display={{ md: "flex" }}
+       p={'10px'}
       >
         <Divider orientation='horizontal' width={'30%'} />
-        <Heading lineHeight='tall' marginY='30px'>
+        <Heading lineHeight='tall' marginY='30px' >
           <Highlight
             query={['RECOMENDACION']}
             styles={{ px: '5', py: '3', rounded: 'full', bg: 'brand.400' }}

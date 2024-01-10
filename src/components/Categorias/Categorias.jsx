@@ -3,7 +3,6 @@ import Categoria from './Categoria';
 import { useSelector } from 'react-redux';
 import { Box } from '@chakra-ui/react';
 
-
 const Categorias = () => {
   const categories = useSelector(state => state.categories.categories);
 

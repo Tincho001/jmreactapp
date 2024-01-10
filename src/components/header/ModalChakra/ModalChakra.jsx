@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Drawer,
   DrawerOverlay,
@@ -13,16 +13,24 @@ import {
   Box,
   Spacer,
   useToast,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from '@chakra-ui/react';
 import { formatPrice } from '../../../utils';
 import { useDisclosure } from '@chakra-ui/react';
 import { TfiShoppingCart, TfiShoppingCartFull } from 'react-icons/tfi';
 import ModalChakraCard from './ModalChakraCard';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart } from '../../../redux/cart/cartSlice'; 
+import { clearCart } from '../../../redux/cart/cartSlice';
 
 const ModalChakra = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isAlertDialogOpen, setIsAlertDialogOpen] = useState(false);
+  const cancelRef = React.useRef();
   const dispatch = useDispatch();
   const { cartItems } = useSelector(state => state.cart);
   const toast = useToast();
@@ -35,20 +43,27 @@ const ModalChakra = () => {
 
   const handleCompra = () => {
     if (cartItems.length > 0) {
-      dispatch(clearCart());
-
-      toast({
-        title: 'GRACIAS POR TU COMPRA',
-        description: 'VUELVE PRONTO!',
-        status: 'info',
-        duration: 5000,
-        isClosable: true,
-      });
-
-      setTimeout(() => {
-        onClose();
-      }, 3000);
+      setIsAlertDialogOpen(true);
     }
+  };
+
+  const handleConfirmCompra = () => {
+    dispatch(clearCart());
+
+    toast({
+      title: 'GRACIAS POR TU COMPRA',
+      description: 'VUELVE PRONTO!',
+      status: 'info',
+      duration: 5000,
+      isClosable: true,
+    });
+
+    onClose();
+    setIsAlertDialogOpen(false);
+  };
+
+  const handleCancelCompra = () => {
+    setIsAlertDialogOpen(false);
   };
 
   return (
@@ -72,7 +87,7 @@ const ModalChakra = () => {
         />
         <DrawerContent bg='brand.300'>
           <DrawerCloseButton />
-          <DrawerHeader >Tus Compras</DrawerHeader>
+          <DrawerHeader>Tus Compras</DrawerHeader>
 
           <DrawerBody>
             {cartItems.length ? (
@@ -104,6 +119,33 @@ const ModalChakra = () => {
           </Button>
         </DrawerContent>
       </Drawer>
+
+      <AlertDialog
+        isOpen={isAlertDialogOpen}
+        leastDestructiveRef={cancelRef}
+        onClose={handleCancelCompra}
+      >
+        <AlertDialogOverlay >
+          <AlertDialogContent bg='brand.400'  >
+            <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+              Confirmar Compra
+            </AlertDialogHeader>
+
+            <AlertDialogBody>
+              ¿Estás seguro de que deseas confirmar tu compra?
+            </AlertDialogBody>
+
+            <AlertDialogFooter>
+              <Button ref={cancelRef} onClick={handleCancelCompra}>
+                Cancelar
+              </Button>
+              <Button colorScheme='blue' onClick={handleConfirmCompra} ml={3}>
+                Confirmar
+              </Button>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
     </>
   );
 };

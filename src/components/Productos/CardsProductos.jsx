@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import CardProducto from './CardProducto';
 import { Button, Box } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';

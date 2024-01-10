@@ -8,6 +8,7 @@ const CardsRecomendacion = () => {
 
   return (
     <Box>
+     
       {recommended.map(recomendado => (
         <CardRecomendacion key={recomendado.id} {...recomendado} />
       ))}

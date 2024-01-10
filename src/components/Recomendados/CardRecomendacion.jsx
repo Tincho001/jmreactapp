@@ -27,16 +27,16 @@ const CardRecomendacion = ({ title, img, desc, price, id }) => {
     >
      <LinkBox > <LinkOverlay href='/tienda'><Image
         objectFit='cover'
-        maxW={{ base: '100%', sm: '300px' }}
+        maxW={{ base: '100%', sm: '250px' }}
         src={img}
         alt={title}
       /></LinkOverlay></LinkBox>
 
       <Stack>
-        <CardBody>
+        <CardBody flexDirection={'column'} alignItems={'center'}>
           <Heading size='md'>{title}</Heading>
 
-          <Text py='5'>{desc}</Text>
+          <Text py='5' >{desc}</Text>
           <Text py='5'>${price}</Text>
         </CardBody>
         <CardFooter>

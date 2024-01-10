@@ -11,14 +11,13 @@ const reducers = combineReducers({
   products: productsReducer,
   recommended: recommendedReducer,
   cart: cartReducer,
-  // user: userReducer,
-  // orders: ordersReducer,
+
 });
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['cart', 'user'], //esto sirve para saber que guardar en el local storage osea en este caso carrito y usuario cuando se logee
+  whitelist: ['cart', 'user'], 
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);

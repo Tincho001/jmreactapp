@@ -47,7 +47,7 @@ const Header = () => {
               Tienda
             </NavLinkStyled>
 
-            <NavLinkContact to='/contacto'>
+            <NavLinkContact to='/contacto' onClick={handleLinkClick}>
               <FcContacts />
             </NavLinkContact>
 

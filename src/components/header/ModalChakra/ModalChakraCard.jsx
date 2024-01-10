@@ -1,14 +1,16 @@
-import React from 'react';
 import {
-  Card,
+  Box,
   Image,
   Stack,
+  Card,
   CardBody,
   Heading,
-  Center,
   Divider,
+  Center,
   Flex,
   ButtonGroup,
+  Button,
+  useDisclosure,
   Popover,
   PopoverContent,
   PopoverHeader,
@@ -16,27 +18,14 @@ import {
   PopoverCloseButton,
   PopoverBody,
   PopoverFooter,
-  Button,
-  useDisclosure,
 } from '@chakra-ui/react';
-import { addToCart } from '../../../redux/cart/cartSlice';
-import {
-  SmallCloseIcon,
-  MinusIcon,
-  AddIcon,
-  DeleteIcon,
-} from '@chakra-ui/icons';
+import { AddIcon, DeleteIcon, MinusIcon, SmallCloseIcon } from '@chakra-ui/icons';
 import { useDispatch } from 'react-redux';
-import {
-  removeFromCart,
-  removeProductCart,
-} from '../../../redux/cart/cartSlice';
-import Increase from '../../UI/Increase/Increase';
-import Count from '../../UI/Count/Count';
+import { addToCart } from '../../../redux/cart/cartSlice';
+import { removeFromCart, removeProductCart } from '../../../redux/cart/cartSlice';
 
 const ModalChakraCard = ({ img, title, id, price, quantity }) => {
   const dispatch = useDispatch();
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleRemoveItem = () => {
@@ -45,19 +34,19 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
 
   const handleConfirmation = () => {
     dispatch(removeProductCart({ id }));
-
     onClose();
   };
 
   return (
-    <>
+    <Box>
       <Card
-        direction={{ base: 'column', sm: 'row' }}
+        display='flex'
+        flexDirection='row'
         overflow='hidden'
         variant='outline'
         size='sm'
         bg='brand.800'
-        h='135px'
+        h='auto'
       >
         <SmallCloseIcon
           onClick={handleRemoveItem}
@@ -65,47 +54,61 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
           cursor={'pointer'}
           boxSize={6}
         />
-        <Flex align='center' w='300px' h='100%'>
-          <Image
-            maxW={{ sm: '150px' }}
-            src={img}
-            borderRadius='full'
-            boxSize='100px'
-            ml='10px'
-          />
-        </Flex>
 
-        <Stack w='500px' h='100%'>
+  <Image
+    maxW={{ base: '100px', md: '150px' }} 
+    src={img}
+    borderRadius='full'
+    boxSize={{ base: '60px', md: '100px' }} 
+    ml={{ base: '0', md: '10px' }} 
+  />
+
+
+
+        <Stack w='auto' h='100%'>
           <CardBody>
-            <Heading size='sm' mb='20px'>
+            <Heading size='sm' mb='20px' isTruncated>
               {title}
             </Heading>
 
             <ButtonGroup size='sm' isAttached variant='outline'>
-              <Increase onClick={() => dispatch(removeFromCart(id))}>
-                {quantity === 1 ? <DeleteIcon /> : <MinusIcon />}
-              </Increase>
+              <Button
+                onClick={() => dispatch(removeFromCart(id))}
+                disabled={quantity === 1}
+                leftIcon={quantity === 1 ? <DeleteIcon /> : <MinusIcon />}
+                variant='outline'
+                colorScheme='whiteAlpha'
+              ></Button>
 
-              <Count>{quantity}</Count>
-
-              <Increase
-                onClick={() => dispatch(addToCart({ img, title, price, id }))}
+              <Button
+                isDisabled
+               
+                variant='outline'
+             
+                color='white'
+                as='b'
+                height={'8'}
               >
-                <AddIcon />
-              </Increase>
+                {quantity}
+              </Button>
+
+              <Button
+                onClick={() => dispatch(addToCart({ img, title, price, id }))}
+                variant='outline'
+                colorScheme='whiteAlpha'
+                leftIcon={<AddIcon />}
+              ></Button>
             </ButtonGroup>
           </CardBody>
         </Stack>
-        <Flex align='center' w='90%' h='100%' fontSize='xl'>
+        <Flex align='center' w='auto' h='100%' fontSize='xl'>
           $ {price}
         </Flex>
       </Card>
       <Center height='20px'>
         <Divider orientation='vertical' />
       </Center>
-
       <Popover
-        returnFocusOnClose={false}
         isOpen={isOpen}
         onClose={onClose}
         placement='right'
@@ -134,8 +137,10 @@ const ModalChakraCard = ({ img, title, id, price, quantity }) => {
           </PopoverFooter>
         </PopoverContent>
       </Popover>
-    </>
+    </Box>
   );
 };
 
 export default ModalChakraCard;
+
+
